@@ -12,12 +12,8 @@ try{ var base = window; }catch( error ){ var base = exports; }
 				If the first parameter is not an array then
 					it is definitely the element to be compared.
 			*/
-			var arrayContains = function arrayContains( ){
+			var arrayContains = function arrayContains( element, array, comparator ){
 				var parameters = argumentsToArray( arguments );
-
-				var array;
-				var element;
-				var comparator;
 				if( parameters[ 0 ] instanceof Array ){
 					array = parameters[ 0 ];
 				}else{
